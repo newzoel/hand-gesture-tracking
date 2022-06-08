@@ -1,6 +1,7 @@
 import argparse
 
 import handTrackingImage as HandTrackImg
+import handTrackingVideo as HandTrackVid
 
 
 def main():
@@ -9,9 +10,9 @@ def main():
         description='Hand Tracking Module')
     #positional argument
     argparser.add_argument(
-        'input-type',
+        'input',
         default='online',
-        help='Type of Input'
+        help='Type of Input [online, offline]'
     )
     #optional argument
     argparser.add_argument(
@@ -29,10 +30,10 @@ def main():
     )
 
     args = argparser.parse_args()
-    if(args.path != None):
+    if(args.input != 'online'):
         HandTrackImg.handTrackingImage(args.path)
-
-
+    else:
+        HandTrackVid.handTrackingVideo(args.path)
 
 
 if __name__ == '__main__':
