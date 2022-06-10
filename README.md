@@ -1,4 +1,4 @@
-#Mediapipe Module for Hand Tracking
+# Mediapipe Module for Hand Tracking
 
 ## Preparation 
 Prepare the environment. You can easily use the python virtual environment
