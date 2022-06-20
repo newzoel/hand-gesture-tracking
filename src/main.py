@@ -1,4 +1,5 @@
 import argparse
+import PIL
 
 import handTrackingImage as HandTrackImg
 import handTrackingVideo as HandTrackVid
@@ -23,7 +24,7 @@ def main():
     )
     argparser.add_argument(
         '-s',
-        '--save-to',
+        '--save_to',
         action='store',
         metavar='OUT',
         help='directory path to save output'
@@ -31,7 +32,9 @@ def main():
 
     args = argparser.parse_args()
     if(args.input != 'online'):
-        HandTrackImg.handTrackingImage(args.path)
+        img = HandTrackImg.handTrackingImage(args.path)
+        if(args.save_to):
+            HandTrackImg.save(img, args.save_to)
     else:
         HandTrackVid.handTrackingVideo(args.path)
 
