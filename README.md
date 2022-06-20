@@ -22,11 +22,12 @@ You can simply run `src/main.py` with necessary arguments:
 > 
 > optional arguments:
 > 
-> -h, --help &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; show this help message and exit
+> -h, --help &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; show this help message and exit
 > 
 > -p PATH, --path PATH &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; path to input data (sources)
 > 
-> -s OUT, --save-to OUT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; path to output data
+> -s OUT, --save_to OUT &nbsp;&nbsp;&nbsp;&nbsp; path to output data
 
 Type of Input :
 * offline - the module can receives single up to multiple images
