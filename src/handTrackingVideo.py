@@ -21,9 +21,14 @@ def handTrackingVideo(path=None):
         ret, frame = cap.read()
         width = cap.get(3)  # float `width`
         height = cap.get(4)  # float `height`
-        frame = cv2.resize(frame, (int(width/3), int(height/4)))    #resize frame
-        print(frame.shape)
 
+        if (width > 1280 and height > 720):
+            if(height > width):
+                frame = cv2.resize(frame, (int(width/3), int(height/5)), interpolation=cv2.INTER_NEAREST)    #resize portrait frame
+                print(frame.shape)
+            else:
+                frame = cv2.resize(frame, (1280, 720), interpolation=cv2.INTER_NEAREST)    #resize landscape frame
+                print(frame.shape)
 
         imgRgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         result = hand.process(imgRgb)
