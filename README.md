@@ -33,7 +33,7 @@ Type of Input :
 * offline - the module can receives single up to multiple images
 * online - the module can receives video file or simply using your real-time camera
 
-##References
+## References
 * [https://github.com/google/mediapipe](https://github.com/google/mediapipe)
   Official Mediapipe Repository
 * [On-Device, Real-Time Hand Tracking with MediaPipe](https://ai.googleblog.com/2019/08/on-device-real-time-hand-tracking-with.html)
